@@ -8,31 +8,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Manejar el menú móvil
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
     
-    if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-            this.innerHTML = mobileMenu.classList.contains('hidden') ? 
-                '<i class="fas fa-bars"></i>' : 
-                '<i class="fas fa-times"></i>';
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            this.innerHTML = mainNav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : 
+                '<i class="fas fa-bars"></i>';
         });
     }
 
     // Cerrar menú móvil al hacer clic en un enlace
-    const mobileLinks = document.querySelectorAll('#mobile-menu a');
-    mobileLinks.forEach(link => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            mainNav.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
         });
     });
 
     // Efecto de desplazamiento suave para enlaces de anclaje
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            if (this.getAttribute('href') !== '#') {
+            if (this.getAttribute('href') !== '#' && this.getAttribute('href') !== '#!') {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
@@ -47,6 +47,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Manejar el estado del header al hacer scroll
+    const header = document.querySelector('.header');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        // Mostrar/ocultar header al hacer scroll
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            // Scrolling down
+            header.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling up
+            header.style.transform = 'translateY(0)';
+        }
+        
+        // Añadir clase scrolled cuando se baja más de 100px
+        if (currentScroll > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+            header.style.transform = 'translateY(0)';
+        }
+        
+        lastScroll = currentScroll;
+    });
+
     // Manejar el formulario de citas
     const appointmentForm = document.getElementById('appointment-form');
     if (appointmentForm) {
@@ -55,14 +82,14 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Simular envío del formulario
             const formMessage = document.getElementById('form-message');
-            formMessage.className = 'form-success mt-4';
             formMessage.textContent = '¡Solicitud de cita recibida! Nos pondremos en contacto contigo pronto.';
-            formMessage.classList.remove('hidden');
+            formMessage.className = 'form-success';
+            formMessage.style.display = 'block';
             
             // Limpiar el formulario después de 5 segundos
             setTimeout(() => {
                 appointmentForm.reset();
-                formMessage.classList.add('hidden');
+                formMessage.style.display = 'none';
             }, 5000);
         });
     }
@@ -75,21 +102,21 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Simular envío del formulario
             const contactMessage = document.getElementById('contact-message');
-            contactMessage.className = 'form-success mt-4';
             contactMessage.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto contigo en breve.';
-            contactMessage.classList.remove('hidden');
+            contactMessage.className = 'form-success';
+            contactMessage.style.display = 'block';
             
             // Limpiar el formulario después de 5 segundos
             setTimeout(() => {
                 contactForm.reset();
-                contactMessage.classList.add('hidden');
+                contactMessage.style.display = 'none';
             }, 5000);
         });
     }
 
     // Animación de contadores
     function animateCounters() {
-        const counters = document.querySelectorAll('.stats-counter');
+        const counters = document.querySelectorAll('.stat-number');
         counters.forEach(counter => {
             const target = +counter.getAttribute('data-count');
             let count = 0;
@@ -121,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.5 });
     
     // Observar el contenedor de contadores
-    const counterContainer = document.querySelector('.counter-container');
+    const counterContainer = document.querySelector('.stats-grid');
     if (counterContainer) {
         observer.observe(counterContainer);
     }
@@ -141,24 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
         fadeInObserver.observe(element);
     });
 
-    // Manejar el estado del header al hacer scroll
-    const header = document.querySelector('header');
-    let lastScroll = 0;
-    
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > lastScroll && currentScroll > 100) {
-            // Scrolling down
-            header.style.transform = 'translateY(-100%)';
-        } else {
-            // Scrolling up
-            header.style.transform = 'translateY(0)';
-        }
-        
-        lastScroll = currentScroll;
-    });
-    
     // Inicializar contadores al cargar la página
     if (window.location.hash) {
         setTimeout(animateCounters, 500);

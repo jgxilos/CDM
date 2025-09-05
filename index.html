@@ -14,14 +14,14 @@
     <meta property="og:url" content="https://www.cmdarellanovelez.com/">
     <meta property="og:title" content="CMD Arellano Velez - Atención Médica Profesional en Maracay">
     <meta property="og:description" content="Centro Médico Docente especializado en atención médica integral con tecnología de vanguardia y profesionales altamente calificados.">
-    <meta property="og:image" content="https://huggingface.co/spaces/JGXILOS/clinica-cmd/resolve/main/Logo.png">
+    <meta property="og:image" content="images/Logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.cmdarellanovelez.com/">
     <meta property="twitter:title" content="CMD Arellano Velez - Atención Médica Profesional en Maracay">
     <meta property="twitter:description" content="Centro Médico Docente especializado en atención médica integral con tecnología de vanguardia y profesionales altamente calificados.">
-    <meta property="twitter:image" content="https://huggingface.co/spaces/JGXILOS/clinica-cmd/resolve/main/Logo.png">
+    <meta property="twitter:image" content="images/Logo.png">
 
     <title>Centro Médico Docente (CMD) Arellano Velez y Asociados C.A. | Atención Médica Profesional en Maracay</title>
 
@@ -34,21 +34,6 @@
     <!-- AOS Library for Scroll Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Open Sans', 'sans-serif'],
-                        body: ['Roboto', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="Styles/styles.css">
     
@@ -60,8 +45,8 @@
         "name": "Centro Médico Docente (CMD) Arellano Velez y Asociados C.A.",
         "description": "Centro Médico Docente especializado en atención médica integral con tecnología de vanguardia y profesionales altamente calificados.",
         "url": "https://www.cmdarellanovelez.com/",
-        "logo": "https://huggingface.co/spaces/JGXILOS/clinica-cmd/resolve/main/Logo%20(2).png",
-        "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3",
+        "logo": "images/Logo.png",
+        "image": "images/clinic.jpeg",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Av. Principal #1234, Col. Centro",
@@ -95,72 +80,65 @@
     </script>
 </head>
 
-<body class="font-sans text-gray-800">
+<body>
     <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50" data-aos="fade-down">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <a href="#inicio">
-                    <img src="https://huggingface.co/spaces/JGXILOS/clinica-cmd/resolve/main/Logo.png" alt="Logo de Centro Médico Docente Arellano Velez" class="h-14" loading="eager">
-                </a>
-            </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#inicio" class="tertiary-text hover:primary-text font-medium">Inicio</a>
-                <a href="#servicios" class="tertiary-text hover:primary-text font-medium">Servicios</a>
-                <a href="#doctores" class="tertiary-text hover:primary-text font-medium">Doctores</a>
-                <a href="#nosotros" class="tertiary-text hover:primary-text font-medium">Nosotros</a>
-                <a href="#contacto" class="tertiary-text hover:primary-text font-medium">Contacto</a>
-            </nav>
-            <div class="hidden md:block">
-                <a href="#cita" class="primary-bg hover-secondary-bg text-white px-6 py-2 rounded-full font-medium transition duration-300">Agendar Cita</a>
-            </div>
-            <button class="md:hidden tertiary-text text-2xl" id="menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-        <!-- Mobile menu -->
-        <div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-lg" id="mobile-menu">
-            <div class="flex flex-col space-y-4">
-                <a href="#inicio" class="tertiary-text hover:primary-text font-medium">Inicio</a>
-                <a href="#servicios" class="tertiary-text hover:primary-text font-medium">Servicios</a>
-                <a href="#doctores" class="tertiary-text hover:primary-text font-medium">Doctores</a>
-                <a href="#nosotros" class="tertiary-text hover:primary-text font-medium">Nosotros</a>
-                <a href="#contacto" class="tertiary-text hover:primary-text font-medium">Contacto</a>
-                <a href="#cita" class="primary-bg hover-secondary-bg text-white px-6 py-2 rounded-full font-medium text-center transition duration-300">Agendar Cita</a>
+    <header class="header" data-aos="fade-down">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#inicio">
+                        <img src="images/Logo.png" alt="Logo de Centro Médico Docente Arellano Velez" loading="eager">
+                    </a>
+                </div>
+                <nav class="main-nav" id="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
+                        <li class="nav-item"><a href="#doctores" class="nav-link">Doctores</a></li>
+                        <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                        <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="header-cta">
+                    <a href="#cita" class="btn btn-primary">Agendar Cita</a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero-bg min-h-screen flex items-center text-white relative">
-        <div class="container mx-auto px-4 py-20 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0 hero-text" data-aos="fade-right">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Cuidamos de tu salud con excelencia médica</h1>
-                <p class="text-xl mb-8">En Centro Médico Docente (CMD) Arellano Velez y Asociados C.A. ofrecemos atención médica especializada con tecnología de vanguardia y un equipo humano comprometido con tu bienestar.</p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 hero-buttons">
-                    <a href="#cita" class="primary-bg hover-secondary-bg text-white px-8 py-3 rounded-full font-medium text-center transition duration-300 floating">Agendar Cita</a>
-                    <a href="#servicios" class="bg-white hover:bg-gray-100 tertiary-text px-8 py-3 rounded-full font-medium text-center transition duration-300">Nuestros Servicios</a>
+    <section id="inicio" class="hero min-height-screen">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-right">
+                    <h1 class="hero-title">Cuidamos de tu salud con excelencia médica</h1>
+                    <p class="hero-description">En Centro Médico Docente (CMD) Arellano Velez y Asociados C.A. ofrecemos atención médica especializada con tecnología de vanguardia y un equipo humano comprometido con tu bienestar.</p>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#cita" class="btn btn-primary btn-lg floating">Agendar Cita</a>
+                        <a href="#servicios" class="btn btn-secondary btn-lg">Nuestros Servicios</a>
+                    </div>
                 </div>
-            </div>
-            <div class="md:w-1/2 md:pl-10" data-aos="fade-left">
-                <div class="appointment-form p-8 rounded-lg shadow-xl scaleIn">
-                    <h2 class="text-2xl font-bold tertiary-text mb-6">Solicita tu cita</h2>
-                    <form id="appointment-form" class="space-y-4">
-                        <div class="fadeInUp">
-                            <label class="block text-gray-700 mb-2">Nombre completo</label>
-                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" name="name" required>
+                <div class="appointment-form" data-aos="fade-left">
+                    <h2 class="form-title">Solicita tu cita</h2>
+                    <form id="appointment-form" class="form">
+                        <div class="form-group fadeInUp">
+                            <label class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" name="name" required>
                         </div>
-                        <div class="fadeInUp" data-aos-delay="50">
-                            <label class="block text-gray-700 mb-2">Teléfono</label>
-                            <input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" name="phone" required>
+                        <div class="form-group fadeInUp" data-aos-delay="50">
+                            <label class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" name="phone" required>
                         </div>
-                        <div class="fadeInUp" data-aos-delay="100">
-                            <label class="block text-gray-700 mb-2">Correo electrónico</label>
-                            <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" name="email" required>
+                        <div class="form-group fadeInUp" data-aos-delay="100">
+                            <label class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" name="email" required>
                         </div>
-                        <div class="fadeInUp" data-aos-delay="150">
-                            <label class="block text-gray-700 mb-2">Especialidad</label>
-                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" name="specialty" required>
+                        <div class="form-group fadeInUp" data-aos-delay="150">
+                            <label class="form-label">Especialidad</label>
+                            <select class="form-control" name="specialty" required>
                                 <option value="">Seleccione una especialidad</option>
                                 <option value="general">Medicina General</option>
                                 <option value="cardiology">Cardiología</option>
@@ -171,350 +149,348 @@
                                 <option value="dentistry">Odontología</option>
                             </select>
                         </div>
-                        <div class="fadeInUp" data-aos-delay="200">
-                            <label class="block text-gray-700 mb-2">Fecha preferida</label>
-                            <input type="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" name="date">
+                        <div class="form-group fadeInUp" data-aos-delay="200">
+                            <label class="form-label">Fecha preferida</label>
+                            <input type="date" class="form-control" name="date">
                         </div>
-                        <button type="submit" class="w-full primary-bg hover-secondary-bg text-white py-3 rounded-lg font-medium transition duration-300 fadeInUp" data-aos-delay="250">Solicitar Cita</button>
+                        <button type="submit" class="btn btn-primary btn-block fadeInUp" data-aos-delay="250">Solicitar Cita</button>
                     </form>
-                    <div id="form-message" class="mt-4 hidden"></div>
+                    <div id="form-message" class="form-message"></div>
                 </div>
             </div>
         </div>
-        <div class="absolute bottom-10 left-0 right-0 flex justify-center">
-            <a href="#servicios" class="text-white text-2xl animate-bounce pulse">
+        <div class="scroll-down">
+            <a href="#servicios" class="scroll-down-link pulse">
                 <i class="fas fa-chevron-down"></i>
             </a>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="servicios" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold tertiary-text mb-4">Nuestros Servicios Médicos</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Ofrecemos una amplia gama de servicios médicos con equipos de última generación y profesionales altamente calificados.</p>
+    <section id="servicios" class="section services-section bg-light">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Nuestros Servicios Médicos</h2>
+                <p class="section-subtitle">Ofrecemos una amplia gama de servicios médicos con equipos de última generación y profesionales altamente calificados.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-3">
                 <!-- Service 1 -->
-                <div class="service-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon w-16 h-16 bg-[#e6f7f6] rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-heartbeat primary-text text-2xl"></i>
+                <div class="card service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon-container">
+                        <i class="fas fa-heartbeat service-icon"></i>
                     </div>
-                    <h3 class="text-xl font-bold tertiary-text mb-3">Cardiología</h3>
-                    <p class="text-gray-600 mb-4">Evaluación y tratamiento de enfermedades cardiovasculares con tecnología de punta y seguimiento personalizado.</p>
-                    <a href="#" class="inline-block primary-text font-medium hover:secondary-text transition duration-300">
-                        Más información <i class="fas fa-arrow-right ml-2"></i>
+                    <h3 class="service-title">Cardiología</h3>
+                    <p class="service-description">Evaluación y tratamiento de enfermedades cardiovasculares con tecnología de punta y seguimiento personalizado.</p>
+                    <a href="#" class="service-link">
+                        Más información <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 <!-- Service 2 -->
-                <div class="service-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon w-16 h-16 bg-[#e6f7f6] rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-baby primary-text text-2xl"></i>
+                <div class="card service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon-container">
+                        <i class="fas fa-baby service-icon"></i>
                     </div>
-                    <h3 class="text-xl font-bold tertiary-text mb-3">Pediatría</h3>
-                    <p class="text-gray-600 mb-4">Atención integral para niños y adolescentes con enfoque preventivo y tratamiento de enfermedades infantiles.</p>
-                    <a href="#" class="inline-block primary-text font-medium hover:secondary-text transition duration-300">
-                        Más información <i class="fas fa-arrow-right ml-2"></i>
+                    <h3 class="service-title">Pediatría</h3>
+                    <p class="service-description">Atención integral para niños y adolescentes con enfoque preventivo y tratamiento de enfermedades infantiles.</p>
+                    <a href="#" class="service-link">
+                        Más información <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 <!-- Service 3 -->
-                <div class="service-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon w-16 h-16 bg-[#e6f7f6] rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-bone primary-text text-2xl"></i>
+                <div class="card service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon-container">
+                        <i class="fas fa-bone service-icon"></i>
                     </div>
-                    <h3 class="text-xl font-bold tertiary-text mb-3">Ortopedia</h3>
-                    <p class="text-gray-600 mb-4">Diagnóstico y tratamiento de problemas musculoesqueléticos con técnicas quirúrgicas y no quirúrgicas avanzadas.</p>
-                    <a href="#" class="inline-block primary-text font-medium hover:secondary-text transition duration-300">
-                        Más información <i class="fas fa-arrow-right ml-2"></i>
+                    <h3 class="service-title">Ortopedia</h3>
+                    <p class="service-description">Diagnóstico y tratamiento de problemas musculoesqueléticos con técnicas quirúrgicas y no quirúrgicas avanzadas.</p>
+                    <a href="#" class="service-link">
+                        Más información <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 <!-- Service 4 -->
-                <div class="service-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon w-16 h-16 bg-[#e6f7f6] rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-female primary-text text-2xl"></i>
+                <div class="card service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon-container">
+                        <i class="fas fa-female service-icon"></i>
                     </div>
-                    <h3 class="text-xl font-bold tertiary-text mb-3">Ginecología</h3>
-                    <p class="text-gray-600 mb-4">Cuidado integral de la salud femenina en todas las etapas de la vida, desde la adolescencia hasta la menopausia.</p>
-                    <a href="#" class="inline-block primary-text font-medium hover:secondary-text transition duration-300">
-                        Más información <i class="fas fa-arrow-right ml-2"></i>
+                    <h3 class="service-title">Ginecología</h3>
+                    <p class="service-description">Cuidado integral de la salud femenina en todas las etapas de la vida, desde la adolescencia hasta la menopausia.</p>
+                    <a href="#" class="service-link">
+                        Más información <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 <!-- Service 5 -->
-                <div class="service-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon w-16 h-16 bg-[#e6f7f6] rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-eye primary-text text-2xl"></i>
+                <div class="card service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon-container">
+                        <i class="fas fa-eye service-icon"></i>
                     </div>
-                    <h3 class="text-xl font-bold tertiary-text mb-3">Oftalmología</h3>
-                    <p class="text-gray-600 mb-4">Diagnóstico y tratamiento de enfermedades oculares con equipos de última generación y técnicas innovadoras.</p>
-                    <a href="#" class="inline-block primary-text font-medium hover:secondary-text transition duration-300">
-                        Más información <i class="fas fa-arrow-right ml-2"></i>
+                    <h3 class="service-title">Oftalmología</h3>
+                    <p class="service-description">Diagnóstico y tratamiento de enfermedades oculares con equipos de última generación y técnicas innovadoras.</p>
+                    <a href="#" class="service-link">
+                        Más información <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 <!-- Service 6 -->
-                <div class="service-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon w-16 h-16 bg-[#e6f7f6] rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-tooth primary-text text-2xl"></i>
+                <div class="card service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon-container">
+                        <i class="fas fa-tooth service-icon"></i>
                     </div>
-                    <h3 class="text-xl font-bold tertiary-text mb-3">Odontología</h3>
-                    <p class="text-gray-600 mb-4">Atención dental integral con enfoque en prevención, estética y rehabilitación oral de alta calidad.</p>
-                    <a href="#" class="inline-block primary-text font-medium hover:secondary-text transition duration-300">
-                        Más información <i class="fas fa-arrow-right ml-2"></i>
+                    <h3 class="service-title">Odontología</h3>
+                    <p class="service-description">Atención dental integral con enfoque en prevención, estética y rehabilitación oral de alta calidad.</p>
+                    <a href="#" class="service-link">
+                        Más información <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
-            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
-                <a href="#" class="inline-block primary-bg hover-secondary-bg text-white px-8 py-3 rounded-full font-medium transition duration-300">
-                    Ver todos los servicios <i class="fas fa-arrow-right ml-2"></i>
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+                <a href="#" class="btn btn-primary btn-lg">
+                    Ver todos los servicios <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
 
             <!-- Stats Section -->
-            <div class="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8" data-aos="fade-up" data-aos-delay="500">
-                <div class="bg-white p-8 rounded-xl shadow-md text-center counter-container">
-                    <div class="text-5xl font-bold primary-text mb-2 stats-counter" data-count="15000">0</div>
-                    <h4 class="tertiary-text font-bold">Pacientes Atendidos</h4>
+            <div class="grid grid-4 stats-grid mt-10" data-aos="fade-up" data-aos-delay="500">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="15000">0</div>
+                    <h4 class="stat-label">Pacientes Atendidos</h4>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-md text-center counter-container">
-                    <div class="text-5xl font-bold primary-text mb-2 stats-counter" data-count="50">0</div>
-                    <h4 class="tertiary-text font-bold">Profesionales</h4>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="50">0</div>
+                    <h4 class="stat-label">Profesionales</h4>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-md text-center counter-container">
-                    <div class="text-5xl font-bold primary-text mb-2 stats-counter" data-count="18">0</div>
-                    <h4 class="tertiary-text font-bold">Especialidades</h4>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="18">0</div>
+                    <h4 class="stat-label">Especialidades</h4>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-md text-center counter-container">
-                    <div class="text-5xl font-bold primary-text mb-2 stats-counter" data-count="18">0</div>
-                    <h4 class="tertiary-text font-bold">Años de Experiencia</h4>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="18">0</div>
+                    <h4 class="stat-label">Años de Experiencia</h4>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Doctors Section -->
-    <section id="doctores" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold tertiary-text mb-4">Nuestro Equipo Médico</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Profesionales altamente calificados y comprometidos con tu salud y bienestar.</p>
+    <section id="doctores" class="section doctors-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Nuestro Equipo Médico</h2>
+                <p class="section-subtitle">Profesionales altamente calificados y comprometidos con tu salud y bienestar.</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-4">
                 <!-- Doctor 1 -->
-                <div class="doctor-card rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-64 bg-gray-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3" alt="Dr. Carlos Méndez - Cardiólogo" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                <div class="doctor-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="doctor-image-container">
+                        <img src="images/doctor-1.jpeg" alt="Dr. Carlos Méndez - Cardiólogo" class="doctor-image">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold tertiary-text mb-1">Dr. Carlos Méndez</h3>
-                        <p class="primary-text mb-3">Cardiólogo</p>
-                        <p class="text-gray-600 mb-4">Especialista en enfermedades cardiovasculares con más de 15 años de experiencia.</p>
-                        <div class="flex space-x-3">
-                            <a href="#" class="primary-text hover:secondary-text" aria-label="LinkedIn del Dr. Carlos Méndez"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="primary-text hover:secondary-text" aria-label="Correo del Dr. Carlos Méndez"><i class="fas fa-envelope"></i></a>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Carlos Méndez</h3>
+                        <p class="doctor-specialty">Cardiólogo</p>
+                        <p class="doctor-description">Especialista en enfermedades cardiovasculares con más de 15 años de experiencia.</p>
+                        <div class="doctor-social">
+                            <a href="#" class="social-link" aria-label="LinkedIn del Dr. Carlos Méndez"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link" aria-label="Correo del Dr. Carlos Méndez"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
                 <!-- Doctor 2 -->
-                <div class="doctor-card rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-64 bg-gray-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3" alt="Dra. Laura Fernández - Pediatra" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                <div class="doctor-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="doctor-image-container">
+                        <img src="images/doctor-2.jpeg" alt="Dra. Laura Fernández - Pediatra" class="doctor-image">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold tertiary-text mb-1">Dra. Laura Fernández</h3>
-                        <p class="primary-text mb-3">Pediatra</p>
-                        <p class="text-gray-600 mb-4">Especializada en cuidado infantil y medicina preventiva para niños y adolescentes.</p>
-                        <div class="flex space-x-3">
-                            <a href="#" class="primary-text hover:secondary-text" aria-label="LinkedIn de la Dra. Laura Fernández"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="primary-text hover:secondary-text" aria-label="Correo de la Dra. Laura Fernández"><i class="fas fa-envelope"></i></a>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dra. Laura Fernández</h3>
+                        <p class="doctor-specialty">Pediatra</p>
+                        <p class="doctor-description">Especializada en cuidado infantil y medicina preventiva para niños y adolescentes.</p>
+                        <div class="doctor-social">
+                            <a href="#" class="social-link" aria-label="LinkedIn de la Dra. Laura Fernández"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link" aria-label="Correo de la Dra. Laura Fernández"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
                 <!-- Doctor 3 -->
-                <div class="doctor-card rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-                    <div class="h-64 bg-gray-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1622253692010-333f2f603f46?ixlib=rb-4.0.3" alt="Dr. Javier Rodríguez - Ortopedista" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                <div class="doctor-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="doctor-image-container">
+                        <img src="images/doctor-3.jpeg" alt="Dr. Javier Rodríguez - Ortopedista" class="doctor-image">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold tertiary-text mb-1">Dr. Javier Rodríguez</h3>
-                        <p class="primary-text mb-3">Ortopedista</p>
-                        <p class="text-gray-600 mb-4">Experto en cirugía reconstructiva y tratamiento de lesiones deportivas.</p>
-                        <div class="flex space-x-3">
-                            <a href="#" class="primary-text hover:secondary-text" aria-label="LinkedIn del Dr. Javier Rodríguez"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="primary-text hover:secondary-text" aria-label="Correo del Dr. Javier Rodríguez"><i class="fas fa-envelope"></i></a>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Javier Rodríguez</h3>
+                        <p class="doctor-specialty">Ortopedista</p>
+                        <p class="doctor-description">Experto en cirugía reconstructiva y tratamiento de lesiones deportivas.</p>
+                        <div class="doctor-social">
+                            <a href="#" class="social-link" aria-label="LinkedIn del Dr. Javier Rodríguez"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link" aria-label="Correo del Dr. Javier Rodríguez"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
                 <!-- Doctor 4 -->
-                <div class="doctor-card rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-                    <div class="h-64 bg-gray-200 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-4.0.3" alt="Dra. Ana García - Ginecóloga" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                <div class="doctor-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="doctor-image-container">
+                        <img src="images/doctor-4.jpeg" alt="Dra. Ana García - Ginecóloga" class="doctor-image">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold tertiary-text mb-1">Dra. Ana García</h3>
-                        <p class="primary-text mb-3">Ginecóloga</p>
-                        <p class="text-gray-600 mb-4">Especialista en salud femenina, obstetricia y medicina reproductiva.</p>
-                        <div class="flex space-x-3">
-                            <a href="#" class="primary-text hover:secondary-text" aria-label="LinkedIn de la Dra. Ana García"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="primary-text hover:secondary-text" aria-label="Correo de la Dra. Ana García"><i class="fas fa-envelope"></i></a>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dra. Ana García</h3>
+                        <p class="doctor-specialty">Ginecóloga</p>
+                        <p class="doctor-description">Especialista en salud femenina, obstetricia y medicina reproductiva.</p>
+                        <div class="doctor-social">
+                            <a href="#" class="social-link" aria-label="LinkedIn de la Dra. Ana García"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link" aria-label="Correo de la Dra. Ana García"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
-                <a href="#" class="inline-block primary-bg hover-secondary-bg text-white px-8 py-3 rounded-full font-medium transition duration-300">
-                    Conoce a todo nuestro equipo <i class="fas fa-arrow-right ml-2"></i>
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="500">
+                <a href="#" class="btn btn-primary btn-lg">
+                    Conoce a todo nuestro equipo <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="nosotros" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center">
-                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12" data-aos="fade-right">
-                    <h2 class="text-3xl md:text-4xl font-bold tertiary-text mb-6">Nuestra Historia y Compromiso</h2>
-                    <p class="text-gray-600 mb-6 text-lg">Fundada en 2005, Centro Médico Docente (CMD) Arellano Velez y Asociados C.A. nació con el propósito de ofrecer atención médica de excelencia en un ambiente cálido y profesional.</p>
-                    <p class="text-gray-600 mb-8 text-lg">Hoy contamos con más de 15 especialidades médicas, tecnología de vanguardia y un equipo humano comprometido con el bienestar de nuestros pacientes.</p>
-                    <div class="grid grid-cols-2 gap-6 mb-8">
-                        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
-                            <i class="fas fa-award primary-text text-3xl mb-3"></i>
-                            <h3 class="text-xl font-bold tertiary-text mb-2">Certificaciones</h3>
-                            <p class="text-gray-600">Acreditados por las principales organizaciones de salud nacionales e internacionales.</p>
+    <section id="nosotros" class="section about-section bg-light">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h2 class="section-title">Nuestra Historia y Compromiso</h2>
+                    <p class="about-description">Fundada en 2005, Centro Médico Docente (CMD) Arellano Velez y Asociados C.A. nació con el propósito de ofrecer atención médica de excelencia en un ambiente cálido y profesional.</p>
+                    <p class="about-description">Hoy contamos con más de 15 especialidades médicas, tecnología de vanguardia y un equipo humano comprometido con el bienestar de nuestros pacientes.</p>
+                    <div class="features-grid">
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                            <i class="fas fa-award feature-icon"></i>
+                            <h3 class="feature-title">Certificaciones</h3>
+                            <p class="feature-description">Acreditados por las principales organizaciones de salud nacionales e internacionales.</p>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
-                            <i class="fas fa-user-md primary-text text-3xl mb-3"></i>
-                            <h3 class="text-xl font-bold tertiary-text mb-2">Profesionales</h3>
-                            <p class="text-gray-600">Más de 50 especialistas altamente calificados y en constante actualización.</p>
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                            <i class="fas fa-user-md feature-icon"></i>
+                            <h3 class="feature-title">Profesionales</h3>
+                            <p class="feature-description">Más de 50 especialistas altamente calificados y en constante actualización.</p>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
-                            <i class="fas fa-hospital primary-text text-3xl mb-3"></i>
-                            <h3 class="text-xl font-bold tertiary-text mb-2">Infraestructura</h3>
-                            <p class="text-gray-600">Modernas instalaciones equipadas con tecnología de última generación.</p>
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                            <i class="fas fa-hospital feature-icon"></i>
+                            <h3 class="feature-title">Infraestructura</h3>
+                            <p class="feature-description">Modernas instalaciones equipadas con tecnología de última generación.</p>
                         </div>
-                        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="400">
-                            <i class="fas fa-heart primary-text text-3xl mb-3"></i>
-                            <h3 class="text-xl font-bold tertiary-text mb-2">Atención Personalizada</h3>
-                            <p class="text-gray-600">Enfoque centrado en el paciente con planes de tratamiento personalizados.</p>
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                            <i class="fas fa-heart feature-icon"></i>
+                            <h3 class="feature-title">Atención Personalizada</h3>
+                            <p class="feature-description">Enfoque centrado en el paciente con planes de tratamiento personalizados.</p>
                         </div>
                     </div>
-                    <a href="#contacto" class="inline-block primary-bg hover-secondary-bg text-white px-8 py-3 rounded-full font-medium transition duration-300">
-                        Contáctanos <i class="fas fa-arrow-right ml-2"></i>
+                    <a href="#contacto" class="btn btn-primary btn-lg">
+                        Contáctanos <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-                <div class="lg:w-1/2" data-aos="fade-left">
-                    <div class="bg-gray-200 rounded-xl overflow-hidden h-[600px]">
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3" alt="Instalaciones del Centro Médico Docente Arellano Velez" class="w-full h-full object-cover">
-                    </div>
+                <div class="about-image" data-aos="fade-left">
+                    <img src="images/clinic.jpeg" alt="Instalaciones del Centro Médico Docente Arellano Velez" class="image-responsive">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contacto" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold tertiary-text mb-4">Contáctanos</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">¿Tienes preguntas? Estamos aquí para ayudarte. Completa el formulario o utiliza nuestros datos de contacto.</p>
+    <section id="contacto" class="section contact-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Contáctanos</h2>
+                <p class="section-subtitle">¿Tienes preguntas? Estamos aquí para ayudarte. Completa el formulario o utiliza nuestros datos de contacto.</p>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div>
-                    <div class="mb-10" data-aos="fade-up">
-                        <h3 class="text-2xl font-bold tertiary-text mb-6">Información de Contacto</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="bg-[#e6f7f6] p-3 rounded-full mr-4">
-                                    <i class="fas fa-map-marker-alt primary-text text-xl"></i>
+            <div class="grid grid-2">
+                <div class="contact-info">
+                    <div class="info-card" data-aos="fade-up">
+                        <h3 class="info-title">Información de Contacto</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
                                 </div>
-                                <div>
-                                    <h4 class="font-bold tertiary-text mb-1">Dirección</h4>
-                                    <p class="text-gray-600">Av. Principal #1234, Col. Centro, Maracay, Aragua 2101, Venezuela</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="bg-[#e6f7f6] p-3 rounded-full mr-4">
-                                    <i class="fas fa-phone primary-text text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold tertiary-text mb-1">Teléfono</h4>
-                                    <p class="text-gray-600">+58 243 123 4567</p>
+                                <div class="contact-text">
+                                    <h4>Dirección</h4>
+                                    <p>Av. Principal #1234, Col. Centro, Maracay, Aragua 2101, Venezuela</p>
                                 </div>
                             </div>
-                            <div class="flex items-start">
-                                <div class="bg-[#e6f7f6] p-3 rounded-full mr-4">
-                                    <i class="fas fa-envelope primary-text text-xl"></i>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
                                 </div>
-                                <div>
-                                    <h4 class="font-bold tertiary-text mb-1">Correo Electrónico</h4>
-                                    <p class="text-gray-600">info@cmdarellanovelez.com</p>
+                                <div class="contact-text">
+                                    <h4>Teléfono</h4>
+                                    <p>+58 243 123 4567</p>
                                 </div>
                             </div>
-                            <div class="flex items-start">
-                                <div class="bg-[#e6f7f6] p-3 rounded-full mr-4">
-                                    <i class="fas fa-clock primary-text text-xl"></i>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
                                 </div>
-                                <div>
-                                    <h4 class="font-bold tertiary-text mb-1">Horario de Atención</h4>
-                                    <p class="text-gray-600">Lunes a Viernes: 8:00 AM - 8:00 PM<br>Sábados: 9:00 AM - 2:00 PM</p>
+                                <div class="contact-text">
+                                    <h4>Correo Electrónico</h4>
+                                    <p>info@cmdarellanovelez.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h4>Horario de Atención</h4>
+                                    <p>Lunes a Viernes: 8:00 AM - 8:00 PM<br>Sábados: 9:00 AM - 2:00 PM</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="mb-10" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="text-2xl font-bold tertiary-text mb-6">Síguenos en Redes Sociales</h3>
-                        <div class="flex space-x-4">
-                            <a href="https://facebook.com/cmdarellanovelez" target="_blank" class="primary-bg hover-secondary-bg text-white w-12 h-12 rounded-full flex items-center justify-center transition duration-300" aria-label="Facebook">
+                    <div class="social-links" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="info-title">Síguenos en Redes Sociales</h3>
+                        <div class="social-icons">
+                            <a href="https://facebook.com/cmdarellanovelez" target="_blank" class="social-icon" aria-label="Facebook">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://twitter.com/cmdarellanovelez" target="_blank" class="primary-bg hover-secondary-bg text-white w-12 h-12 rounded-full flex items-center justify-center transition duration-300" aria-label="Twitter">
+                            <a href="https://twitter.com/cmdarellanovelez" target="_blank" class="social-icon" aria-label="Twitter">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="https://instagram.com/cmdarellanovelez" target="_blank" class="primary-bg hover-secondary-bg text-white w-12 h-12 rounded-full flex items-center justify-center transition duration-300" aria-label="Instagram">
+                            <a href="https://instagram.com/cmdarellanovelez" target="_blank" class="social-icon" aria-label="Instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://linkedin.com/company/cmdarellanovelez" target="_blank" class="primary-bg hover-secondary-bg text-white w-12 h-12 rounded-full flex items-center justify-center transition duration-300" aria-label="LinkedIn">
+                            <a href="https://linkedin.com/company/cmdarellanovelez" target="_blank" class="social-icon" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
                         </div>
                     </div>
-                    <div class="mb-10" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="text-2xl font-bold tertiary-text mb-6">Emergencias</h3>
-                        <p class="text-gray-600 mb-4">En caso de emergencia, llame al <span class="font-bold primary-text">+58 243 123 4567</span> o visite nuestra sala de emergencias las 24 horas.</p>
-                        <a href="tel:+582431234567" class="primary-bg hover-secondary-bg text-white px-6 py-2 rounded-full font-medium inline-flex items-center transition duration-300">
+                    <div class="emergency-contact" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="info-title">Emergencias</h3>
+                        <p class="emergency-description">En caso de emergencia, llame al <span class="primary-color">+58 243 123 4567</span> o visite nuestra sala de emergencias las 24 horas.</p>
+                        <a href="tel:+582431234567" class="btn btn-primary">
                             <i class="fas fa-phone-alt mr-2"></i> Llamar ahora
                         </a>
                     </div>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-white p-8 rounded-xl shadow-md">
-                        <h3 class="text-2xl font-bold tertiary-text mb-6">Envíanos un mensaje</h3>
-                        <form id="contact-form" class="space-y-4">
-                            <div>
-                                <label class="block text-gray-700 mb-2">Nombre completo</label>
-                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" name="name" required>
+                <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                        <h3 class="form-title">Envíanos un mensaje</h3>
+                        <form id="contact-form" class="form">
+                            <div class="form-group">
+                                <label class="form-label">Nombre completo</label>
+                                <input type="text" class="form-control" name="name" required>
                             </div>
-                            <div>
-                                <label class="block text-gray-700 mb-2">Correo electrónico</label>
-                                <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" name="email" required>
+                            <div class="form-group">
+                                <label class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" name="email" required>
                             </div>
-                            <div>
-                                <label class="block text-gray-700 mb-2">Teléfono</label>
-                                <input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" name="phone" required>
+                            <div class="form-group">
+                                <label class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" name="phone" required>
                             </div>
-                            <div>
-                                <label class="block text-gray-700 mb-2">Asunto</label>
-                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" name="subject" required>
+                            <div class="form-group">
+                                <label class="form-label">Asunto</label>
+                                <input type="text" class="form-control" name="subject" required>
                             </div>
-                            <div>
-                                <label class="block text-gray-700 mb-2">Mensaje</label>
-                                <textarea rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" name="message" required></textarea>
+                            <div class="form-group">
+                                <label class="form-label">Mensaje</label>
+                                <textarea rows="5" class="form-control" name="message" required></textarea>
                             </div>
-                            <button type="submit" class="w-full primary-bg hover-secondary-bg text-white py-3 rounded-lg font-medium transition duration-300">
+                            <button type="submit" class="btn btn-primary btn-block">
                                 Enviar Mensaje
                             </button>
                         </form>
-                        <div id="contact-message" class="mt-4 hidden"></div>
+                        <div id="contact-message" class="form-message"></div>
                     </div>
                 </div>
             </div>
@@ -522,80 +498,80 @@
     </section>
 
     <!-- Google Maps -->
-    <div class="h-96" data-aos="fade-up">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.005753359426!2d-68.01116198518219!3d10.47310059230219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDI4JzIzLjIiTiA2OMKwMDCnNjAuMiJX!5e0!3m2!1ses!2sve!4v1633110421838!5m2!1ses!2sve" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="map-container" data-aos="fade-up">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.005753359426!2d-68.01116198518219!3d10.47310059230219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDI4JzIzLjIiTiA2OMKwMDCnNjAuMiJX!5e0!3m2!1ses!2sve!4v1633110421838!5m2!1ses!2sve" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/584123456789" target="_blank" class="whatsapp-button fixed right-6 bottom-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition duration-300 z-50" aria-label="Chatea con nosotros por WhatsApp">
-        <i class="fab fa-whatsapp text-3xl"></i>
+    <a href="https://wa.me/584123456789" target="_blank" class="whatsapp-button pulse" aria-label="Chatea con nosotros por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-12 pb-6">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-                <div>
-                    <h3 class="text-xl font-bold mb-6">CMD Arellano Velez</h3>
-                    <p class="text-gray-400 mb-4">Centro Médico Docente especializado en atención médica integral con tecnología de vanguardia y profesionales altamente calificados.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://facebook.com/cmdarellanovelez" target="_blank" class="text-gray-400 hover:text-white transition duration-300" aria-label="Facebook">
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid grid-4">
+                <div class="footer-col">
+                    <h3 class="footer-title">CMD Arellano Velez</h3>
+                    <p class="footer-description">Centro Médico Docente especializado en atención médica integral con tecnología de vanguardia y profesionales altamente calificados.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/cmdarellanovelez" target="_blank" class="social-icon" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://twitter.com/cmdarellanovelez" target="_blank" class="text-gray-400 hover:text-white transition duration-300" aria-label="Twitter">
+                        <a href="https://twitter.com/cmdarellanovelez" target="_blank" class="social-icon" aria-label="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://instagram.com/cmdarellanovelez" target="_blank" class="text-gray-400 hover:text-white transition duration-300" aria-label="Instagram">
+                        <a href="https://instagram.com/cmdarellanovelez" target="_blank" class="social-icon" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://linkedin.com/company/cmdarellanovelez" target="_blank" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn">
+                        <a href="https://linkedin.com/company/cmdarellanovelez" target="_blank" class="social-icon" aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-6">Enlaces Rápidos</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition duration-300">Inicio</a></li>
-                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-300">Servicios</a></li>
-                        <li><a href="#doctores" class="text-gray-400 hover:text-white transition duration-300">Doctores</a></li>
-                        <li><a href="#nosotros" class="text-gray-400 hover:text-white transition duration-300">Nosotros</a></li>
-                        <li><a href="#contacto" class="text-gray-400 hover:text-white transition duration-300">Contacto</a></li>
+                <div class="footer-col">
+                    <h3 class="footer-title">Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#doctores">Doctores</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-6">Servicios</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Cardiología</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Pediatría</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Ortopedia</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Ginecología</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Oftalmología</a></li>
+                <div class="footer-col">
+                    <h3 class="footer-title">Servicios</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Cardiología</a></li>
+                        <li><a href="#">Pediatría</a></li>
+                        <li><a href="#">Ortopedia</a></li>
+                        <li><a href="#">Ginecología</a></li>
+                        <li><a href="#">Oftalmología</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-6">Contacto</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-primary"></i>
-                            <span class="text-gray-400">Av. Principal #1234, Col. Centro, Maracay, Aragua 2101, Venezuela</span>
+                <div class="footer-col">
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. Principal #1234, Col. Centro, Maracay, Aragua 2101, Venezuela</span>
                         </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone mr-2 text-primary"></i>
-                            <span class="text-gray-400">+58 243 123 4567</span>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+58 243 123 4567</span>
                         </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2 text-primary"></i>
-                            <span class="text-gray-400">info@cmdarellanovelez.com</span>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@cmdarellanovelez.com</span>
                         </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-clock mr-2 text-primary"></i>
-                            <span class="text-gray-400">Lun-Vie: 8AM-8PM, Sáb: 9AM-2PM</span>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Lun-Vie: 8AM-8PM, Sáb: 9AM-2PM</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-6 text-center text-gray-400">
+            <div class="footer-bottom">
                 <p>&copy; 2023 Centro Médico Docente (CMD) Arellano Velez y Asociados C.A. Todos los derechos reservados.</p>
             </div>
         </div>

@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const hero = document.querySelector('.hero');
         if (hero) {
             const scrollPosition = window.pageYOffset;
-            hero.style.backgroundPosition = `center ${scrollPosition * 0.5}px`;
+            hero.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
         }
     });
     
@@ -110,20 +110,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Manejar el formulario de contacto
-    const contactForm = document.getElementById('contact-form');
+    // Manejar el formulario de contacto en la sección de contacto
+    const contactForm = document.getElementById('appointment-form-contact');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             // Simular envío del formulario
-            const contactMessage = document.getElementById('contact-message');
-            contactMessage.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto contigo en breve.';
-            contactMessage.className = 'form-success';
-            contactMessage.style.display = 'block';
+            const formMessage = document.createElement('div');
+            formMessage.className = 'form-message form-success';
+            formMessage.textContent = '¡Solicitud de cita recibida! Nos pondremos en contacto contigo pronto.';
+            contactForm.appendChild(formMessage);
+            
             // Limpiar el formulario después de 5 segundos
             setTimeout(() => {
                 contactForm.reset();
-                contactMessage.style.display = 'none';
+                formMessage.style.display = 'none';
             }, 5000);
         });
     }
@@ -183,11 +184,45 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.location.hash) {
         setTimeout(animateCounters, 500);
     }
-});
-
-// Prevenir comportamiento predeterminado de enlaces con href="#"
-document.querySelectorAll('a[href="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-        e.preventDefault();
+    
+    // Testimonials Carousel
+    const testimonials = document.querySelectorAll('.testimonial');
+    const prevBtn = document.querySelector('.carousel-control.prev');
+    const nextBtn = document.querySelector('.carousel-control.next');
+    let currentTestimonial = 0;
+    
+    function showTestimonial(index) {
+        testimonials.forEach(testimonial => {
+            testimonial.classList.remove('active');
+        });
+        testimonials[index].classList.add('active');
+    }
+    
+    function nextTestimonial() {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+    }
+    
+    function prevTestimonial() {
+        currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+        showTestimonial(currentTestimonial);
+    }
+    
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', prevTestimonial);
+        nextBtn.addEventListener('click', nextTestimonial);
+    }
+    
+    // Auto-rotate testimonials
+    if (testimonials.length > 0) {
+        showTestimonial(currentTestimonial);
+        setInterval(nextTestimonial, 5000);
+    }
+    
+    // Prevenir comportamiento predeterminado de enlaces con href="#"
+    document.querySelectorAll('a[href="#"]').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+        });
     });
 });

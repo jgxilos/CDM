@@ -112,20 +112,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Manejar el formulario de contacto en la sección de contacto
     const contactForm = document.getElementById('appointment-form-contact');
+    // En el evento de envío del formulario de contacto
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
+            
             // Simular envío del formulario
             const formMessage = document.createElement('div');
             formMessage.className = 'form-message form-success';
-            formMessage.textContent = '¡Solicitud de cita recibida! Nos pondremos en contacto contigo pronto.';
+            formMessage.textContent = '¡Mensaje enviado! Nos pondremos en contacto pronto.';
             contactForm.appendChild(formMessage);
-            
-            // Limpiar el formulario después de 5 segundos
+
+            // Animar el botón durante 1 segundo
+            const btn = contactForm.querySelector('.btn-primary');
+            btn.style.transform = 'scale(0.95)';
             setTimeout(() => {
+                btn.style.transform = 'scale(1)';
                 contactForm.reset();
-                formMessage.style.display = 'none';
-            }, 5000);
+                formMessage.remove();
+            }, 1000);
         });
     }
     
@@ -226,3 +231,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+

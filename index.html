@@ -39,12 +39,12 @@
         "logo": "images/Logo.png",
         "image": "images/clinic.jpeg",
         "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Av. Principal #1234, Col. Centro",
-            "addressLocality": "Maracay",
-            "addressRegion": "Aragua",
-            "postalCode": "2101",
-            "addressCountry": "VE"
+        "@type": "PostalAddress",
+        "streetAddress": "Plaza La Concordia, Torre Ejecutiva",
+        "addressLocality": "Puerto Cabello",
+        "addressRegion": "Carabobo",
+        "postalCode": "2050",
+        "addressCountry": "VE"
         },
         "geo": {
             "@type": "GeoCoordinates",
@@ -115,19 +115,15 @@
                     <h2 class="form-title">Solicita tu cita</h2>
                     <form id="appointment-form" class="form">
                         <div class="form-group fadeInUp">
-                            <label class="form-label">Nombre completo</label>
-                            <input type="text" class="form-control" name="name" required>
+                            <input type="text" class="form-control" name="name" placeholder="Nombre completo" required>
                         </div>
                         <div class="form-group fadeInUp" data-aos-delay="50">
-                            <label class="form-label">Teléfono</label>
-                            <input type="tel" class="form-control" name="phone" required>
+                            <input type="tel" class="form-control" name="phone" placeholder="Teléfono" required>
                         </div>
                         <div class="form-group fadeInUp" data-aos-delay="100">
-                            <label class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" name="email" required>
+                            <input type="email" class="form-control" name="email" placeholder="Correo electrónico" required>
                         </div>
                         <div class="form-group fadeInUp" data-aos-delay="150">
-                            <label class="form-label">Especialidad</label>
                             <select class="form-control" name="specialty" required>
                                 <option value="">Seleccione una especialidad</option>
                                 <option value="general">Medicina General</option>
@@ -140,8 +136,7 @@
                             </select>
                         </div>
                         <div class="form-group fadeInUp" data-aos-delay="200">
-                            <label class="form-label">Fecha preferida</label>
-                            <input type="date" class="form-control" name="date">
+                            <input type="date" class="form-control" name="date" required>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block fadeInUp" data-aos-delay="250">Solicitar Cita</button>
                     </form>

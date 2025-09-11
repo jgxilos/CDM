@@ -144,13 +144,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const updateCounter = () => {
                 if (count < target) {
                     count += increment;
-                    counter.textContent = Math.floor(count);
+                    // Formatear el número con separador de miles
+                    counter.textContent = Math.floor(count).toLocaleString('es-ES');
                     requestAnimationFrame(updateCounter);
                 } else {
-                    counter.textContent = target;
+                    counter.textContent = target.toLocaleString('es-ES');
                 }
             };
-            // Iniciar animación después de un pequeño retraso
             setTimeout(updateCounter, 300);
         });
     }

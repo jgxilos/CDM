@@ -4,6 +4,7 @@
     --secondary-color: #107D7E;
     --tertiary-color: #4E5156;
     --light-color: #f8f9fa;
+    --bg-color: #ffffff;
     --dark-color: #212529;
     --text-color: #495057;
     --light-gray: #e9ecef;
@@ -19,6 +20,11 @@
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
     --title-font-size: 2rem; /* Nueva variable para tamaños de título */
+    --primary-light: #e0f2f1; /* Un tono claro del color primario, por ejemplo */
+}
+
+.bg-primary-light {
+    background-color: var(--primary-light);
 }
 
 /* Reset y Base */
@@ -448,6 +454,24 @@ ul {
     padding: 2rem;
     text-align: center;
     box-shadow: var(--shadow);
+}
+
+.stats-section {
+    padding: 5rem 0;
+    background-color: var(--primary-light);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--tertiary-color);
+    margin-bottom: 0.5rem;
 }
 
 .stat-number {
@@ -1139,7 +1163,7 @@ ul {
 
 /* Backgrounds */
 .bg-light {
-    background-color: var(--light-color);
+    background-color: var(--bg-color);
 }
 
 .bg-dark {

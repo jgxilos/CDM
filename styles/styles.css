@@ -20,7 +20,8 @@
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
     --title-font-size: 2rem; /* Nueva variable para tamaños de título */
-    --primary-light: #e0f2f1; /* Un tono claro del color primario, por ejemplo */
+    --primary-light: #e0f2f1;
+    /* Un tono claro del color primario, por ejemplo */
 }
 
 .bg-primary-light {
@@ -103,15 +104,18 @@ ul {
 
 /* Personalizar colores para la sección de testimonios */
 .testimonials-section .section-title {
-    font-size: 2.5rem; /* Tamaño de fuente más grande */
-    color: #fff; /* Blanco */
+    font-size: 2.5rem;
+    /* Tamaño de fuente más grande */
+    color: #fff;
+    /* Blanco */
     margin: 0 auto;
 
 }
 
 .testimonials-section .section-subtitle {
     font-size: 1.25rem;
-    color: #fff; /* Blanco */
+    color: #fff;
+    /* Blanco */
     max-width: 700px;
     margin: 0 auto;
 }
@@ -227,9 +231,9 @@ ul {
     color: var(--primary-color);
 }
 
-/* Hero Section */
+/* Hero Section (CORRECCIÓN AQUÍ) */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/doctores.jpeg') center/cover fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/doctores.jpeg') center/cover fixed;
     color: #fff;
     position: relative;
     padding-top: 80px;
@@ -796,7 +800,8 @@ ul {
 /* Estilos para el carrusel de testimonios */
 .testimonials-section {
     color: #fff;
-    padding: 6rem 0; /* Aumentar espacio vertical */
+    padding: 6rem 0;
+    /* Aumentar espacio vertical */
 }
 
 .testimonials-carousel {
@@ -804,18 +809,21 @@ ul {
     max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
-    text-align: center; /* Centrar contenido */
+    text-align: center;
+    /* Centrar contenido */
 }
 
 .testimonial {
     display: none;
-    padding: 4rem 5rem; /* Mayor padding interno */
+    padding: 4rem 5rem;
+    /* Mayor padding interno */
     background: rgba(255, 255, 255, 0.1);
     border-radius: 1rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: opacity 0.5s;
     text-align: center;
-    max-width: 800px; /* Asegurar ancho máximo */
+    max-width: 800px;
+    /* Asegurar ancho máximo */
 }
 
 .testimonial.active {
@@ -826,14 +834,16 @@ ul {
 .testimonial blockquote {
     font-size: 1.2rem;
     line-height: 1.6;
-    text-align: center; /* Centrar cita */
+    text-align: center;
+    /* Centrar cita */
 }
 
 .testimonial blockquote p:first-child {
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--primary-color); /* Color verde del icono */
+    color: var(--primary-color);
+    /* Color verde del icono */
 }
 
 .testimonial blockquote p:last-child {
@@ -1324,4 +1334,3 @@ ul {
 .hours-list li span {
     color: #fff;
 }
-

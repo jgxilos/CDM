@@ -233,7 +233,7 @@ ul {
 
 /* Hero Section (CORRECCIÓN AQUÍ) */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/doctores.jpeg') center/cover fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/doctores.webp') center/cover fixed;
     color: #fff;
     position: relative;
     padding-top: 80px;

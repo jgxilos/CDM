@@ -1,5 +1,24 @@
 // Inicialización específica para la página de perfil del doctor
 document.addEventListener('DOMContentLoaded', function() {
+    // Mostrar que la página está cargando
+    document.body.classList.add('loading');
+    
+    // Ocultar loader cuando la página esté completamente cargada
+    window.addEventListener('load', function() {
+        const pageLoader = document.querySelector('.page-loader');
+        if (pageLoader) {
+            setTimeout(function() {
+                pageLoader.classList.add('hidden');
+                document.body.classList.remove('loading');
+                document.body.classList.add('loaded');
+                
+                // Eliminar completamente el loader del DOM después de la animación
+                setTimeout(function() {
+                    pageLoader.remove();
+                }, 500);
+            }, 1000); // Mostrar el loader durante al menos 1 segundo
+        }
+    });
     // Inicializar AOS
     AOS.init({
         duration: 800,

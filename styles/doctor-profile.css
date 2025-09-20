@@ -200,28 +200,20 @@
     color: var(--text-color);
     line-height: 1.6;
     position: relative;
-    padding: 0 1rem;
-}
-
-.testimonial-content p:before,
-.testimonial-content p:after {
-    content: """;
-    font-size: 3rem;
-    color: var(--primary-color);
-    font-family: Georgia, serif;
-    line-height: 1;
-    position: absolute;
+    padding: 0 1rem 0 3rem;
 }
 
 .testimonial-content p:before {
-    left: -10px;
-    top: -10px;
-}
-
-.testimonial-content p:after {
-    content: """;
-    right: -10px;
-    bottom: -20px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url('../images/quote.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
 }
 
 .testimonial-author h4 {
@@ -357,5 +349,14 @@
     .doctor-profile-image {
         width: 250px;
         height: 250px;
+    }
+    
+    .testimonial-content p {
+        padding: 0 0 0 2.5rem;
+    }
+    
+    .testimonial-content p:before {
+        width: 25px;
+        height: 25px;
     }
 }

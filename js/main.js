@@ -252,3 +252,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Manejar el efecto hover para tarjetas de médico en dispositivos táctiles
+function setupDoctorCardHover() {
+    const doctorCards = document.querySelectorAll('.doctor-card');
+    
+    doctorCards.forEach(card => {
+        // Para dispositivos táctiles
+        card.addEventListener('touchstart', function() {
+            this.classList.add('hover-effect');
+        });
+        
+        card.addEventListener('touchend', function() {
+            // Mantener el efecto hasta que se toque fuera de la tarjeta
+            document.addEventListener('touchstart', function removeHover(e) {
+                if (!card.contains(e.target)) {
+                    card.classList.remove('hover-effect');
+                    document.removeEventListener('touchstart', removeHover);
+                }
+            });
+        });
+        
+        // Para mouse
+        card.addEventListener('mouseenter', function() {
+            this.classList.add('hover-effect');
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.classList.remove('hover-effect');
+        });
+    });
+}
+
+// Llamar a la función cuando el DOM esté cargado
+document.addEventListener('DOMContentLoaded', function() {
+    setupDoctorCardHover();
+});
